@@ -24,33 +24,38 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cardView"
-                android:layout_width="wrap_content"
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginLeft="16dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginBottom="8dp"
-                android:maxWidth="60dp"
-                android:maxHeight="60dp"
-                app:cardBackgroundColor="#FFEBAF"
-                app:cardCornerRadius="60dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
 
-                <ImageView
-                    android:id="@+id/imageView2"
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:minWidth="60dp"
-                    android:minHeight="60dp"
-                    android:scaleType="center"
-                    tools:srcCompat="@drawable/ic_baseline_house_24"
-                    app:tint="#FF9800" />
+                    android:maxWidth="60dp"
+                    android:maxHeight="60dp"
+                    app:cardBackgroundColor="#FFEBAF"
+                    app:cardCornerRadius="60dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
 
-            </androidx.cardview.widget.CardView>
+                    <View
+                        android:id="@+id/view"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp" />
+
+                </androidx.cardview.widget.CardView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
             <TextView
                 android:id="@+id/textView3"
@@ -63,12 +68,11 @@
                 android:text="Update your  Barclasy connection in the next 15 days"
                 android:textColor="#FF9800"
                 android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="@+id/cardView"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/imageView3"
                 app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toEndOf="@+id/cardView"
-                app:layout_constraintTop_toTopOf="@+id/cardView"
-                app:layout_constraintVertical_bias="0.5" />
+                app:layout_constraintStart_toEndOf="@+id/constraintLayout"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
                 android:id="@+id/imageView3"
@@ -76,11 +80,22 @@
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="16dp"
                 android:layout_marginRight="16dp"
-                app:layout_constraintBottom_toBottomOf="@+id/cardView"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/cardView"
+                app:layout_constraintTop_toTopOf="parent"
 
                 app:srcCompat="@drawable/ic_baseline_arrow_forward_ios_24"
+                tools:ignore="VectorDrawableCompat" />
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@+id/constraintLayout"
+                app:layout_constraintEnd_toEndOf="@+id/constraintLayout"
+                app:layout_constraintStart_toStartOf="@+id/constraintLayout"
+                app:layout_constraintTop_toTopOf="@+id/constraintLayout"
+                app:srcCompat="@drawable/ic_baseline_house_24"
                 tools:ignore="VectorDrawableCompat" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
